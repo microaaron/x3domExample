@@ -5,7 +5,7 @@
 
     </head>
     <Scene>
-      <Transform rotation = "1 0 0 3.14">
+      <Transform rotation = "1 0 0 1.57">
         <Shape>
             <appearance>
                 <material diffuseColor='0 1 0.5' transparency = "0"></material>
