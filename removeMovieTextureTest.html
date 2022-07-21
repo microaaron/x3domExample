@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--<script type="text/javascript" src="https://x3dom.netlify.app/x3dom.debug.js"></script>-->
+    <script type="text/javascript" src="https://raw.githack.com/microaaron/-1220-1221dist/main/x3dom-full.debug.js"></script>
+    <!--<script type="text/javascript" src="./js/x3dom-physics.debug.js"></script>-->
+    <link rel='stylesheet' type='text/css' href='https://x3dom.netlify.app/x3dom.css' />
+    <title></title>
+    <style type="text/css">
+      body {
+        font: 13px/18px Arial, sans-serif;
+        background: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <x3d showStat="false" showLog="true" x="0px" y="0px" width="900" height="900px">
+      <scene id="SCENE" DEF="SCENE">
+        <NavigationInfo id="head" headlight='true'> </NavigationInfo>
+        <!--<Inline url="./model/yellowcone/yellowcone.x3d">
+        </Inline>-->
+        <shape id="Sp1" DEF="Sp1" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" ispickable="true">
+          <appearance sorttype="auto" alphaclipthreshold="0.1">
+            <movietexture repeats="false" repeatt="false" loop="true"
+              url="https://raw.githack.com/microaaron/x3domExample/main/bigBuckBunny.ogv" scale="true"
+              hidechildren="true" speed="1" pitch="1"></movietexture>
+          </appearance>
+          <box solid="true" ccw="true" usegeocache="true" lit="true" size="2,2,2"></box>
+        </shape>
+        <Transform id="Transform2" translation='-2 0 0'>
+          <shape USE="Sp1">
+          </shape>
+        </Transform>
+
+
+      </scene>
+    </x3d>
+
+    <script>
+      setTimeout(() => {
+        document.getElementById("Sp1").remove();
+      }, 2000);
+
+      setTimeout(() => {
+         document.getElementById("Transform2").remove();
+      }, 4000);
+    </script>
+  </body>
+</html>
